@@ -1,62 +1,85 @@
 import React, { useContext, useState } from "react";
-import {
-  Grid,
-  Segment,
-  Image,
-  Header,
-  Label,
-  Card,
-  Button,
-} from "semantic-ui-react";
+import { Grid, Segment, Button } from "semantic-ui-react";
 import AppContext from "../context/appContext";
 import { Media } from "../config/media";
 
+import ArticleItem from "./ArticleItem";
+
 const Articles = () => {
   const state = useContext(AppContext);
-  const { mostViewed } = state;
+  const { mostViewed, mostEmailed, mostSocialMediaShared } = state;
 
   const [timesSelection, setTimesSelection] = useState("viewed");
 
-  const RenderedArticles = () =>
-    mostViewed &&
-    mostViewed.map((article, k) => {
-      return (
-        <Grid.Column key={k}>
-          <Segment style={{ margin: 10 }}>
-            <Header as="h3">
-              {article.title}
-              <Header.Subheader>{article.byline}</Header.Subheader>
-            </Header>
+  const MostViewedArticles = () => {
+    return (
+      mostViewed &&
+      mostViewed.map((article, k) => {
+        return (
+          <Grid.Column key={k}>
+            <ArticleItem
+              abstract={article.abstract}
+              title={article.title}
+              author={article.byline}
+              media={article.media}
+              url={article.url}
+              pubDate={article.published_date}
+              section={article.nytdsection}
+            />
+          </Grid.Column>
+        );
+      })
+    );
+  };
+  const MostSocialArticles = () => {
+    return (
+      mostSocialMediaShared &&
+      mostSocialMediaShared.map((article, k) => {
+        return (
+          <Grid.Column key={k}>
+            <ArticleItem
+              abstract={article.abstract}
+              title={article.title}
+              author={article.byline}
+              media={article.media}
+              url={article.url}
+              pubDate={article.published_date}
+              section={article.nytdsection}
+            />
+          </Grid.Column>
+        );
+      })
+    );
+  };
+  const MostEmailedArticles = () => {
+    return (
+      mostEmailed &&
+      mostEmailed.map((article, k) => {
+        return (
+          <Grid.Column key={k}>
+            <ArticleItem
+              abstract={article.abstract}
+              title={article.title}
+              author={article.byline}
+              media={article.media}
+              url={article.url}
+              pubDate={article.published_date}
+              section={article.nytdsection}
+            />
+          </Grid.Column>
+        );
+      })
+    );
+  };
 
-            <Card fluid href={article.url} style={{ marginBottom: 30 }}>
-              {article.media.length > 0 ? (
-                <Image
-                  src={article.media[0]["media-metadata"][2].url}
-                  wrapped
-                  ui={false}
-                />
-              ) : null}
+  const renderMostViewed = () =>
+    timesSelection !== "viewed" ? setTimesSelection("viewed") : null;
 
-              <Card.Content>
-                <Card.Description>{article.abstract}</Card.Description>
-              </Card.Content>
-            </Card>
+  const renderMostShared = () =>
+    timesSelection !== "shared" ? setTimesSelection("shared") : null;
 
-            <Label
-              attached="bottom right"
-              color="teal"
-            >{`Published: ${article.published_date}`}</Label>
-
-            {article.subsection && (
-              <Label
-                attached="bottom left"
-                color="grey"
-              >{`Section: ${article.subsection}`}</Label>
-            )}
-          </Segment>
-        </Grid.Column>
-      );
-    });
+  const renderMostEmailed = () =>
+    timesSelection !== "emailed" ? setTimesSelection("emailed") : null;
 
   return (
     <Grid>
@@ -68,7 +91,7 @@ const Articles = () => {
             toggle
             active={timesSelection === "viewed"}
             content="Most Viewed Articles"
-            onClick={() => setTimesSelection("viewed")}
+            onClick={() => renderMostViewed()}
           />
         </Grid.Column>
         <Grid.Column>
@@ -78,7 +101,7 @@ const Articles = () => {
             toggle
             active={timesSelection === "shared"}
             content="Most Shared Articles"
-            onClick={() => setTimesSelection("shared")}
+            onClick={() => renderMostShared()}
           />
         </Grid.Column>
         <Grid.Column>
@@ -88,7 +111,7 @@ const Articles = () => {
             toggle
             active={timesSelection === "emailed"}
             content="Most Emailed Articles"
-            onClick={() => setTimesSelection("emailed")}
+            onClick={() => renderMostEmailed()}
           />
         </Grid.Column>
       </Grid.Row>
@@ -102,28 +125,82 @@ const Articles = () => {
           overflowY: "scroll",
         }}
       >
-        <Grid as={Media} at="mobile">
-          <Grid.Row centered columns={1}>
-            <RenderedArticles />
-          </Grid.Row>
-        </Grid>
+        {timesSelection === "viewed" ? (
+          <>
+            <Grid as={Media} at="mobile">
+              <Grid.Row centered columns={1}>
+                <MostViewedArticles />
+              </Grid.Row>
+            </Grid>
 
-        <Grid as={Media} at="tablet">
-          <Grid.Row centered columns={2}>
-            <RenderedArticles />
-          </Grid.Row>
-        </Grid>
+            <Grid as={Media} at="tablet">
+              <Grid.Row centered columns={2}>
+                <MostViewedArticles />
+              </Grid.Row>
+            </Grid>
 
-        <Grid as={Media} at="computer">
-          <Grid.Row centered columns={3}>
-            <RenderedArticles />
-          </Grid.Row>
-        </Grid>
-        <Grid as={Media} greaterThanOrEqual="largeScreen">
-          <Grid.Row centered columns={4}>
-            <RenderedArticles />
-          </Grid.Row>
-        </Grid>
+            <Grid as={Media} at="computer">
+              <Grid.Row centered columns={3}>
+                <MostViewedArticles />
+              </Grid.Row>
+            </Grid>
+            <Grid as={Media} greaterThanOrEqual="largeScreen">
+              <Grid.Row centered columns={4}>
+                <MostViewedArticles />
+              </Grid.Row>
+            </Grid>
+          </>
+        ) : timesSelection === "shared" ? (
+          <>
+            <Grid as={Media} at="mobile">
+              <Grid.Row centered columns={1}>
+                <MostSocialArticles />
+              </Grid.Row>
+            </Grid>
+
+            <Grid as={Media} at="tablet">
+              <Grid.Row centered columns={2}>
+                <MostSocialArticles />
+              </Grid.Row>
+            </Grid>
+
+            <Grid as={Media} at="computer">
+              <Grid.Row centered columns={3}>
+                <MostSocialArticles />
+              </Grid.Row>
+            </Grid>
+            <Grid as={Media} greaterThanOrEqual="largeScreen">
+              <Grid.Row centered columns={4}>
+                <MostSocialArticles />
+              </Grid.Row>
+            </Grid>
+          </>
+        ) : timesSelection === "emailed" ? (
+          <>
+            <Grid as={Media} at="mobile">
+              <Grid.Row centered columns={1}>
+                <MostEmailedArticles />
+              </Grid.Row>
+            </Grid>
+
+            <Grid as={Media} at="tablet">
+              <Grid.Row centered columns={2}>
+                <MostEmailedArticles />
+              </Grid.Row>
+            </Grid>
+
+            <Grid as={Media} at="computer">
+              <Grid.Row centered columns={3}>
+                <MostEmailedArticles />
+              </Grid.Row>
+            </Grid>
+            <Grid as={Media} greaterThanOrEqual="largeScreen">
+              <Grid.Row centered columns={4}>
+                <MostEmailedArticles />
+              </Grid.Row>
+            </Grid>
+          </>
+        ) : null}
       </Segment>
     </Grid>
   );

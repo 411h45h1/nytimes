@@ -87,6 +87,8 @@ const AppState = (props) => {
     <AppContext.Provider
       value={{
         mostViewed: state.mostViewed,
+        mostEmailed: state.mostEmailed,
+        mostSocialMediaShared: state.mostSocialMediaShared,
         topStories: state.topStories,
         onTopStories,
       }}
