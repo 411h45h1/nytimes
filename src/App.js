@@ -16,7 +16,7 @@ const App = () => {
             <Grid.Row>
               <Grid.Column>
                 <Segment className="Body" inverted color="grey">
-                  <Logo width="500" height="70" style={{ marginBottom: 15 }} />
+                  <Logo style={{ marginBottom: 15 }} />
                   <Articles />
                 </Segment>
               </Grid.Column>
