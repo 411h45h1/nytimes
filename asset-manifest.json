@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/nytimes/static/css/main.5447b212.chunk.css",
+    "main.js": "/nytimes/static/js/main.c2958fe4.chunk.js",
+    "main.js.map": "/nytimes/static/js/main.c2958fe4.chunk.js.map",
+    "runtime-main.js": "/nytimes/static/js/runtime-main.303728aa.js",
+    "runtime-main.js.map": "/nytimes/static/js/runtime-main.303728aa.js.map",
+    "static/css/2.53de9be5.chunk.css": "/nytimes/static/css/2.53de9be5.chunk.css",
+    "static/js/2.43bdeb0b.chunk.js": "/nytimes/static/js/2.43bdeb0b.chunk.js",
+    "static/js/2.43bdeb0b.chunk.js.map": "/nytimes/static/js/2.43bdeb0b.chunk.js.map",
+    "index.html": "/nytimes/index.html",
+    "precache-manifest.4a27f1e4b272e2e88fbb3cc53d1cd59d.js": "/nytimes/precache-manifest.4a27f1e4b272e2e88fbb3cc53d1cd59d.js",
+    "service-worker.js": "/nytimes/service-worker.js",
+    "static/css/2.53de9be5.chunk.css.map": "/nytimes/static/css/2.53de9be5.chunk.css.map",
+    "static/css/main.5447b212.chunk.css.map": "/nytimes/static/css/main.5447b212.chunk.css.map",
+    "static/js/2.43bdeb0b.chunk.js.LICENSE.txt": "/nytimes/static/js/2.43bdeb0b.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/nytimes/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.303728aa.js",
+    "static/css/2.53de9be5.chunk.css",
+    "static/js/2.43bdeb0b.chunk.js",
+    "static/css/main.5447b212.chunk.css",
+    "static/js/main.c2958fe4.chunk.js"
+  ]
+}
