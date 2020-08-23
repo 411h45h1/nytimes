@@ -10,5 +10,5 @@
 
 .Body {
   min-height: 95vh;
-  min-width: 90vw;
+  max-width: 90vw;
 }
