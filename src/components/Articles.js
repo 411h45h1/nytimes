@@ -121,7 +121,7 @@ const Articles = () => {
         style={{
           minHeight: "20vh",
           width: "100%",
-          maxHeight: "60vh",
+          maxHeight: "59vh",
           overflowY: "scroll",
         }}
       >
