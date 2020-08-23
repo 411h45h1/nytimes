@@ -3,7 +3,7 @@ export default (state, { type, payload }) => {
     case "LOAD_MOST_VIEWED_STORIES":
       return {
         ...state,
-        mostPopular: payload,
+        mostViewedArticles: payload,
       };
 
     case "LOAD_TOP_STORIES":

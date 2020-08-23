@@ -4,17 +4,16 @@ import appReducer from "./appReducer";
 
 const AppState = (props) => {
   const initialState = {
-    mostPopular: null,
+    mostViewedArticles: null,
     topStories: null,
   };
   const [state, dispatch] = useReducer(appReducer, initialState);
-  const { mostPopular, topStories } = state;
 
   useEffect(() => {
-    onMostPopular();
+    onMostViewedArticles();
   }, []);
 
-  const onMostPopular = () => {
+  const onMostViewedArticles = () => {
     fetch(
       "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=zE0uXeFH19AB52dh61Pf3gcbxOgciZxS",
       {
@@ -48,7 +47,7 @@ const AppState = (props) => {
   return (
     <AppContext.Provider
       value={{
-        mostPopular: state.mostPopular,
+        mostViewedArticles: state.mostViewedArticles,
         topStories: state.topStories,
         onTopStories,
       }}
