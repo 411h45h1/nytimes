@@ -50,7 +50,9 @@ const App = () => {
                   </Media>
 
                   <Media at="computer">
-                    <Logo style={{ marginTop: 5, marginBottom: 15 }} />
+                    <Logo
+                      style={{ marginTop: 5, marginBottom: 15, height: "15vh" }}
+                    />
                   </Media>
 
                   <Media greaterThan="computer">
