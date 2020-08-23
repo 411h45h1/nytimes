@@ -4,16 +4,25 @@ import appReducer from "./appReducer";
 
 const AppState = (props) => {
   const initialState = {
-    mostViewedArticles: null,
+    mostViewed: null,
+    mostEmailed: null,
+    mostSocialMediaShared: null,
     topStories: null,
   };
   const [state, dispatch] = useReducer(appReducer, initialState);
+  const { mostViewed, mostEmailed, mostSocialMediaShared } = state;
 
   useEffect(() => {
-    onMostViewedArticles();
-  }, []);
+    return !mostViewed
+      ? onMostViewed()
+      : !mostEmailed
+      ? onMostEmailed()
+      : !mostSocialMediaShared
+      ? onMostSocial()
+      : undefined;
+  }, [mostViewed, mostEmailed, mostSocialMediaShared]);
 
-  const onMostViewedArticles = () => {
+  const onMostViewed = () => {
     fetch(
       "https://api.nytimes.com/svc/mostpopular/v2/viewed/30.json?api-key=zE0uXeFH19AB52dh61Pf3gcbxOgciZxS",
       {
@@ -24,6 +33,36 @@ const AppState = (props) => {
       .then(async (response) => {
         let res = await response.json();
         dispatch({ type: "LOAD_MOST_VIEWED_STORIES", payload: res.results });
+      })
+      .catch((error) => console.log("error", error));
+  };
+
+  const onMostSocial = () => {
+    fetch(
+      "https://api.nytimes.com/svc/mostpopular/v2/shared/30.json?api-key=zE0uXeFH19AB52dh61Pf3gcbxOgciZxS",
+      {
+        method: "GET",
+        redirect: "follow",
+      }
+    )
+      .then(async (response) => {
+        let res = await response.json();
+        dispatch({ type: "LOAD_MOST_SHARED_STORIES", payload: res.results });
+      })
+      .catch((error) => console.log("error", error));
+  };
+
+  const onMostEmailed = () => {
+    fetch(
+      "https://api.nytimes.com/svc/mostpopular/v2/emailed/30.json?api-key=zE0uXeFH19AB52dh61Pf3gcbxOgciZxS",
+      {
+        method: "GET",
+        redirect: "follow",
+      }
+    )
+      .then(async (response) => {
+        let res = await response.json();
+        dispatch({ type: "LOAD_MOST_EMAILED_STORIES", payload: res.results });
       })
       .catch((error) => console.log("error", error));
   };
@@ -47,7 +86,7 @@ const AppState = (props) => {
   return (
     <AppContext.Provider
       value={{
-        mostViewedArticles: state.mostViewedArticles,
+        mostViewed: state.mostViewed,
         topStories: state.topStories,
         onTopStories,
       }}

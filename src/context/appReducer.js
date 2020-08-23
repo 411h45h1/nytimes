@@ -3,7 +3,19 @@ export default (state, { type, payload }) => {
     case "LOAD_MOST_VIEWED_STORIES":
       return {
         ...state,
-        mostViewedArticles: payload,
+        mostViewed: payload,
+      };
+
+    case "LOAD_MOST_EMAILED_STORIES":
+      return {
+        ...state,
+        mostEmailed: payload,
+      };
+
+    case "LOAD_MOST_SHARED_STORIES":
+      return {
+        ...state,
+        mostSocialMediaShared: payload,
       };
 
     case "LOAD_TOP_STORIES":

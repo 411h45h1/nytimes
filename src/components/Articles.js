@@ -13,13 +13,13 @@ import { Media } from "../config/media";
 
 const Articles = () => {
   const state = useContext(AppContext);
-  const { mostViewedArticles } = state;
+  const { mostViewed } = state;
 
   const [timesSelection, setTimesSelection] = useState("viewed");
 
   const RenderedArticles = () =>
-    mostViewedArticles &&
-    mostViewedArticles.map((article, k) => {
+    mostViewed &&
+    mostViewed.map((article, k) => {
       return (
         <Grid.Column key={k}>
           <Segment style={{ margin: 10 }}>
@@ -94,7 +94,7 @@ const Articles = () => {
       </Grid.Row>
       <Segment
         inverted
-        loading={!mostViewedArticles}
+        loading={!mostViewed}
         style={{
           minHeight: "20vh",
           width: "100%",
