@@ -15,7 +15,7 @@ const AppState = (props) => {
 
   const onMostViewedArticles = () => {
     fetch(
-      "https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=zE0uXeFH19AB52dh61Pf3gcbxOgciZxS",
+      "https://api.nytimes.com/svc/mostpopular/v2/viewed/30.json?api-key=zE0uXeFH19AB52dh61Pf3gcbxOgciZxS",
       {
         method: "GET",
         redirect: "follow",

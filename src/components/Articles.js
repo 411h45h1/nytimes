@@ -1,5 +1,13 @@
 import React, { useContext, useState } from "react";
-import { Grid, Segment, Header, Label, Card, Button } from "semantic-ui-react";
+import {
+  Grid,
+  Segment,
+  Image,
+  Header,
+  Label,
+  Card,
+  Button,
+} from "semantic-ui-react";
 import AppContext from "../context/appContext";
 import { Media } from "../config/media";
 
@@ -20,12 +28,19 @@ const Articles = () => {
               <Header.Subheader>{article.byline}</Header.Subheader>
             </Header>
 
-            <Card
-              fluid
-              href={article.url}
-              description={article.abstract}
-              style={{ marginBottom: 30 }}
-            />
+            <Card fluid href={article.url} style={{ marginBottom: 30 }}>
+              {article.media.length > 0 ? (
+                <Image
+                  src={article.media[0]["media-metadata"][2].url}
+                  wrapped
+                  ui={false}
+                />
+              ) : null}
+
+              <Card.Content>
+                <Card.Description>{article.abstract}</Card.Description>
+              </Card.Content>
+            </Card>
 
             <Label
               attached="bottom right"
