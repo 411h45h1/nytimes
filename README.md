@@ -2,7 +2,7 @@
 
 > Live Website: https://ahmedalihashi.github.io/nytimes/   
 
-> Windows App Version Download [here](https://mega.nz/file/Py5RHDyJ#4Zk6pnWU19D5kaMzhKqHK5n4ZDR_LPx760s3ecvCirY) (win32 x64)
+> Windows App Version Download [here](https://mega.nz/file/WjpnBZKJ#XB6gHmDN4LpqKbVB2XbwFEvs7obaz6hxtlSL-zPs5iQ) (win32 x64)
 
 This is an app that displays the most viewed,shared and emailed articles of the last 30 days from [The New York Times](https://www.nytimes.com/) using their [api](https://developer.nytimes.com/).
 
