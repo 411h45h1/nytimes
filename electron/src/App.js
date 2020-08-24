@@ -17,7 +17,7 @@ const App = () => {
           <Grid columns={1}>
             <Grid.Row>
               <Grid.Column>
-                <Segment className="Body" inverted color="grey">
+                <Segment className="Body" raised color="black">
                   <Grid>
                     <Grid.Column width={16}>
                       <Button.Group floated="right">
