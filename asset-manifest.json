@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nytimes/static/css/main.e8c54df0.chunk.css",
-    "main.js": "/nytimes/static/js/main.c501cca8.chunk.js",
-    "main.js.map": "/nytimes/static/js/main.c501cca8.chunk.js.map",
+    "main.js": "/nytimes/static/js/main.72c7db61.chunk.js",
+    "main.js.map": "/nytimes/static/js/main.72c7db61.chunk.js.map",
     "runtime-main.js": "/nytimes/static/js/runtime-main.303728aa.js",
     "runtime-main.js.map": "/nytimes/static/js/runtime-main.303728aa.js.map",
     "static/css/2.bc5e7e76.chunk.css": "/nytimes/static/css/2.bc5e7e76.chunk.css",
     "static/js/2.5dabc447.chunk.js": "/nytimes/static/js/2.5dabc447.chunk.js",
     "static/js/2.5dabc447.chunk.js.map": "/nytimes/static/js/2.5dabc447.chunk.js.map",
     "index.html": "/nytimes/index.html",
-    "precache-manifest.decc47e682ee3bb4dca5eaf05acfd2f2.js": "/nytimes/precache-manifest.decc47e682ee3bb4dca5eaf05acfd2f2.js",
+    "precache-manifest.6fe81867d32b16e185a14cc99a21a6bb.js": "/nytimes/precache-manifest.6fe81867d32b16e185a14cc99a21a6bb.js",
     "service-worker.js": "/nytimes/service-worker.js",
     "static/css/2.bc5e7e76.chunk.css.map": "/nytimes/static/css/2.bc5e7e76.chunk.css.map",
     "static/css/main.e8c54df0.chunk.css.map": "/nytimes/static/css/main.e8c54df0.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.bc5e7e76.chunk.css",
     "static/js/2.5dabc447.chunk.js",
     "static/css/main.e8c54df0.chunk.css",
-    "static/js/main.c501cca8.chunk.js"
+    "static/js/main.72c7db61.chunk.js"
   ]
 }
