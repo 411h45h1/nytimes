@@ -70,8 +70,8 @@ const TopStoryArticles = () => {
 
   return (
     <Grid>
-      <div style={{ marginTop: 40, marginBottom: 20, minWidth: "90vw" }}>
-        <p style={{ fontSize: 40, fontWeight: "bold" }}>Top Stories</p>
+      <div style={{ marginTop: 20, marginBottom: 20, minWidth: "90vw" }}>
+        <p id="topStories">Top Stories</p>
         <Select
           fluid
           placeholder="Choose a Section"
