@@ -41,10 +41,10 @@ npm run build-win or yarn build~win
 ```
 ## ScreenShot
 
-### Website
-
-<img src='./github/website.png' height='600' width='800' ></img>
-
 ### Windows Application
 
-<img src='./github/electron.png' height='550' width='800' ></img>
+<p float="left">
+<img src='./github/electron1.png' height='550' width='450' ></img>
+<img src='./github/electron2.png' height='550' width='450' ></img> 
+</p>
+
