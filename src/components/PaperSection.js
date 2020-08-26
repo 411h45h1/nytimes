@@ -12,7 +12,11 @@ const PaperSection = () => {
   const { newspaperSection, handleFlipSection } = state;
   useEffect(() => {}, [newspaperSection]);
   return (
-    <Segment className="Body" raised color="black">
+    <Segment
+      className="Body"
+      raised
+      color={newspaperSection === "viral" ? "black" : "orange"}
+    >
       {newspaperSection === "viral" ? (
         <>
           <Label

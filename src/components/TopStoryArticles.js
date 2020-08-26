@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Grid, Segment, Select } from "semantic-ui-react";
+import { Grid, Header, Segment, Select } from "semantic-ui-react";
 import AppContext from "../context/appContext";
 import { Media } from "../config/media";
 
@@ -71,7 +71,7 @@ const TopStoryArticles = () => {
   return (
     <Grid>
       <div style={{ marginTop: 40, marginBottom: 20, minWidth: "90vw" }}>
-        <p style={{ fontSize: 30, fontWeight: "bold" }}>Top Stories</p>
+        <p style={{ fontSize: 40, fontWeight: "bold" }}>Top Stories</p>
         <Select
           fluid
           placeholder="Sections"
@@ -80,74 +80,114 @@ const TopStoryArticles = () => {
         />
       </div>
 
-      {topStories && (
+      {
         <>
           <Media at="mobile">
             <Segment
               inverted
-              loading={!topStories}
               style={{
+                minWidth: "84vw",
+                minHeight: "10vh",
                 maxHeight: "70vh",
-                overflowY: "scroll",
+                overflowY: topStories ? "scroll" : null,
               }}
             >
               <Grid>
-                <Grid.Row centered columns={1}>
-                  <TopStories />
-                </Grid.Row>
+                {topStories ? (
+                  <Grid.Row centered columns={1}>
+                    <TopStories />
+                  </Grid.Row>
+                ) : (
+                  <Header
+                    as="h2"
+                    inverted
+                    content="Select a section above"
+                    style={{ marginTop: 20 }}
+                  />
+                )}
               </Grid>
             </Segment>
           </Media>
           <Media at="tablet">
             <Segment
               inverted
-              loading={!topStories}
               style={{
+                minWidth: "86vw",
+                minHeight: "10vh",
                 maxHeight: "65vh",
-                overflowY: "scroll",
+                overflowY: topStories ? "scroll" : null,
               }}
             >
               <Grid>
-                <Grid.Row centered columns={2}>
-                  <TopStories />
-                </Grid.Row>
+                {topStories ? (
+                  <Grid.Row centered columns={2}>
+                    <TopStories />
+                  </Grid.Row>
+                ) : (
+                  <Header
+                    as="h2"
+                    inverted
+                    content="Select a section above"
+                    style={{ marginTop: 20 }}
+                  />
+                )}
               </Grid>
             </Segment>
           </Media>
           <Media at="computer">
             <Segment
               inverted
-              loading={!topStories}
               style={{
+                width: "80vw",
+                minHeight: "10vh",
                 maxHeight: "67vh",
-                overflowY: "scroll",
+                overflowY: topStories ? "scroll" : null,
               }}
             >
               <Grid>
-                <Grid.Row centered columns={3}>
-                  <TopStories />
-                </Grid.Row>
+                {topStories ? (
+                  <Grid.Row centered columns={3}>
+                    <TopStories />
+                  </Grid.Row>
+                ) : (
+                  <Header
+                    as="h2"
+                    inverted
+                    content="Select a section above"
+                    style={{ marginTop: 20 }}
+                  />
+                )}
               </Grid>
             </Segment>
           </Media>
           <Media greaterThanOrEqual="largeScreen">
             <Segment
               inverted
-              loading={!topStories}
               style={{
+                width: "80vw",
+                minHeight: "10vh",
                 maxHeight: "68vh",
-                overflowY: "scroll",
+                overflowY: topStories ? "scroll" : null,
               }}
             >
               <Grid>
-                <Grid.Row centered columns={4}>
-                  <TopStories />
-                </Grid.Row>
+                {topStories ? (
+                  <Grid.Row centered columns={4}>
+                    <TopStories />
+                  </Grid.Row>
+                ) : (
+                  <Header
+                    as="h2"
+                    inverted
+                    content="Select a section above"
+                    style={{ marginTop: 20 }}
+                  />
+                )}
               </Grid>
             </Segment>
           </Media>
         </>
-      )}
+      }
     </Grid>
   );
 };
