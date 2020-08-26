@@ -74,7 +74,7 @@ const TopStoryArticles = () => {
         <p style={{ fontSize: 40, fontWeight: "bold" }}>Top Stories</p>
         <Select
           fluid
-          placeholder="Sections"
+          placeholder="Choose a Section"
           options={storyOption}
           onChange={(e, { value }) => renderTopStories(value)}
         />
