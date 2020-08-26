@@ -24,6 +24,12 @@ export default (state, { type, payload }) => {
         topStories: payload,
       };
 
+    case "FLIP_SECTION":
+      return {
+        ...state,
+        newspaperSection: payload,
+      };
+
     default:
       return state;
   }

@@ -10,5 +10,12 @@
 
 .Body {
   min-height: 90vh;
-  max-width: 97vw;
+  max-width: 90vw;
+}
+
+#topStories {
+  font-family: "Euclid Fraktur", "Old English Text MT", fantasy, serif;
+  font-size: 10vh;
+  font-weight: bold;
+  margin: 0%;
 }

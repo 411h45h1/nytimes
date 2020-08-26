@@ -18,13 +18,13 @@ const ArticleItem = ({
       </Header>
 
       <Card
-        as="a"
-        target="_blank"
         fluid
         href={url}
+        target="_blank"
+        rel="noopener noreferrer"
         style={{ marginBottom: 30 }}
       >
-        {media.length > 0 ? (
+        {media && media.length > 0 ? (
           <Image src={media[0]["media-metadata"][2].url} wrapped ui={false} />
         ) : null}
 
