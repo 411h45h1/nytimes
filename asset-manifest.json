@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/nytimes/static/css/main.e8c54df0.chunk.css",
-    "main.js": "/nytimes/static/js/main.72c7db61.chunk.js",
-    "main.js.map": "/nytimes/static/js/main.72c7db61.chunk.js.map",
+    "main.js": "/nytimes/static/js/main.6f7ec67e.chunk.js",
+    "main.js.map": "/nytimes/static/js/main.6f7ec67e.chunk.js.map",
     "runtime-main.js": "/nytimes/static/js/runtime-main.303728aa.js",
     "runtime-main.js.map": "/nytimes/static/js/runtime-main.303728aa.js.map",
-    "static/css/2.bc5e7e76.chunk.css": "/nytimes/static/css/2.bc5e7e76.chunk.css",
-    "static/js/2.5dabc447.chunk.js": "/nytimes/static/js/2.5dabc447.chunk.js",
-    "static/js/2.5dabc447.chunk.js.map": "/nytimes/static/js/2.5dabc447.chunk.js.map",
+    "static/css/2.53de9be5.chunk.css": "/nytimes/static/css/2.53de9be5.chunk.css",
+    "static/js/2.1eb625d2.chunk.js": "/nytimes/static/js/2.1eb625d2.chunk.js",
+    "static/js/2.1eb625d2.chunk.js.map": "/nytimes/static/js/2.1eb625d2.chunk.js.map",
     "index.html": "/nytimes/index.html",
-    "precache-manifest.6fe81867d32b16e185a14cc99a21a6bb.js": "/nytimes/precache-manifest.6fe81867d32b16e185a14cc99a21a6bb.js",
+    "precache-manifest.8a4e5f868822b8abdb3860528fc5fd79.js": "/nytimes/precache-manifest.8a4e5f868822b8abdb3860528fc5fd79.js",
     "service-worker.js": "/nytimes/service-worker.js",
-    "static/css/2.bc5e7e76.chunk.css.map": "/nytimes/static/css/2.bc5e7e76.chunk.css.map",
+    "static/css/2.53de9be5.chunk.css.map": "/nytimes/static/css/2.53de9be5.chunk.css.map",
     "static/css/main.e8c54df0.chunk.css.map": "/nytimes/static/css/main.e8c54df0.chunk.css.map",
-    "static/js/2.5dabc447.chunk.js.LICENSE.txt": "/nytimes/static/js/2.5dabc447.chunk.js.LICENSE.txt",
+    "static/js/2.1eb625d2.chunk.js.LICENSE.txt": "/nytimes/static/js/2.1eb625d2.chunk.js.LICENSE.txt",
     "static/media/semantic.min.css": "/nytimes/static/media/outline-icons.ef60a4f6.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.303728aa.js",
-    "static/css/2.bc5e7e76.chunk.css",
-    "static/js/2.5dabc447.chunk.js",
+    "static/css/2.53de9be5.chunk.css",
+    "static/js/2.1eb625d2.chunk.js",
     "static/css/main.e8c54df0.chunk.css",
-    "static/js/main.72c7db61.chunk.js"
+    "static/js/main.6f7ec67e.chunk.js"
   ]
 }
