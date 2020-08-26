@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "73f56d547cf072977383120e58632b71",
+    "revision": "2591da43f8ff67ce991960ab3c9e1a48",
     "url": "/nytimes/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nytimes/static/css/2.53de9be5.chunk.css"
   },
   {
-    "revision": "caacf9bad565ce1394c1",
+    "revision": "cb4979c5b34291afe054",
     "url": "/nytimes/static/css/main.e8c54df0.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nytimes/static/js/2.1eb625d2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "caacf9bad565ce1394c1",
-    "url": "/nytimes/static/js/main.6f7ec67e.chunk.js"
+    "revision": "cb4979c5b34291afe054",
+    "url": "/nytimes/static/js/main.a991280a.chunk.js"
   },
   {
     "revision": "21058feaa904639d7311",
