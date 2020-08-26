@@ -18,7 +18,7 @@ const ArticleItem = ({
       </Header>
 
       <Card fluid href={url} style={{ marginBottom: 30 }}>
-        {media.length > 0 ? (
+        {media && media.length > 0 ? (
           <Image src={media[0]["media-metadata"][2].url} wrapped ui={false} />
         ) : null}
 

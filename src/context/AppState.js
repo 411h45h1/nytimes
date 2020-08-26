@@ -6,6 +6,7 @@ const address = "https://api.nytimes.com/svc";
 
 const AppState = (props) => {
   const initialState = {
+    newspaperSection: "viral",
     mostViewed: null,
     mostEmailed: null,
     mostSocialMediaShared: null,
@@ -76,16 +77,21 @@ const AppState = (props) => {
       .catch((error) => console.log("error", error));
   };
 
-  console.log("state", state);
+  const handleFlipSection = (section) =>
+    dispatch({ type: "FLIP_SECTION", payload: section });
+
+  // console.log("state", state);
 
   return (
     <AppContext.Provider
       value={{
+        newspaperSection: state.newspaperSection,
         mostViewed: state.mostViewed,
         mostEmailed: state.mostEmailed,
         mostSocialMediaShared: state.mostSocialMediaShared,
         topStories: state.topStories,
         onTopStories,
+        handleFlipSection,
       }}
     >
       {props.children}
