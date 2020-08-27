@@ -26,7 +26,7 @@ const AppState = (props) => {
   }, [mostViewed, mostEmailed, mostSocialMediaShared]);
 
   const onMostViewed = () => {
-    fetch(`${address}/mostpopular/v2/viewed/30.json?api-key=${key}`, {
+    fetch(`${address}/mostpopular/v2/viewed/7.json?api-key=${key}`, {
       method: "GET",
       redirect: "follow",
     })
@@ -39,7 +39,7 @@ const AppState = (props) => {
 
   const onMostSocial = () => {
     fetch(
-      `${address}/mostpopular/v2/shared/30.json?api-key=${key}`,
+      `${address}/mostpopular/v2/shared/7.json?api-key=${key}`,
 
       {
         method: "GET",
@@ -54,7 +54,7 @@ const AppState = (props) => {
   };
 
   const onMostEmailed = () => {
-    fetch(`${address}/mostpopular/v2/emailed/30.json?api-key=${key}`, {
+    fetch(`${address}/mostpopular/v2/emailed/7.json?api-key=${key}`, {
       method: "GET",
       redirect: "follow",
     })
