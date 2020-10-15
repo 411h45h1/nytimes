@@ -19,9 +19,6 @@ npm run start or yarn start
 ```
 
 ## Windows Application
-
-You can download the pre-built version 
-
 To create a light dev version
 
 ```
