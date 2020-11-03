@@ -18,6 +18,7 @@ const TopStoryArticles = () => {
         return (
           <Grid.Column key={k}>
             <ArticleItem
+              TopStories
               abstract={article.abstract}
               title={article.title}
               author={article.byline}

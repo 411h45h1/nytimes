@@ -7,10 +7,14 @@ import Logo from "../assets/Logo";
 import Articles from "../components/Articles";
 import TopStoryArticles from "../components/TopStoryArticles";
 
+const { app } = window.require("electron").remote;
+
 const PaperSection = () => {
   const state = useContext(AppContext);
   const { newspaperSection, handleFlipSection } = state;
+
   useEffect(() => {}, [newspaperSection]);
+
   return (
     <Segment
       className="Body"
@@ -39,10 +43,18 @@ const PaperSection = () => {
                   rel="noopener noreferrer"
                 />
                 <Button
+                  icon="sync alternate"
+                  color="blue"
+                  onClick={() => {
+                    app.relaunch();
+                    app.exit();
+                  }}
+                />
+                <Button
                   icon="power off"
                   color="red"
                   onClick={() => {
-                    window.close();
+                    app.quit();
                   }}
                 />
               </Button.Group>
@@ -52,20 +64,49 @@ const PaperSection = () => {
             <Logo style={{ marginTop: 20, marginBottom: 15 }} />
           </Media>
           <Media at="tablet">
-            <Logo style={{ marginTop: 20, marginBottom: 15 }} />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Logo
+                style={{ marginTop: 20, marginBottom: 15, height: "12vh" }}
+              />
+            </div>
           </Media>
           <Media at="computer">
-            <Logo style={{ marginTop: 20, marginBottom: 15 }} />
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Logo
+                style={{ marginTop: 20, marginBottom: 15, height: "15vh" }}
+              />
+            </div>
           </Media>
           <Media greaterThan="computer">
-            <Logo
+            <div
               style={{
-                marginTop: 25,
-                marginBottom: 15,
-                height: "20vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
-            />
+            >
+              <Logo
+                style={{
+                  marginTop: 25,
+                  marginBottom: 15,
+                  height: "15vh",
+                }}
+              />
+            </div>
           </Media>
+
           <Articles />
         </>
       ) : (

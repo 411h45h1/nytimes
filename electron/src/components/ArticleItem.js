@@ -9,7 +9,17 @@ const ArticleItem = ({
   url,
   pubDate,
   section,
+  TopStories,
 }) => {
+  const renderImage = () =>
+    media[0]["media-metadata"][2] ? (
+      <Image src={media[0]["media-metadata"][2].url} wrapped ui={false} />
+    ) : media[0]["media-metadata"][1] ? (
+      <Image src={media[0]["media-metadata"][1].url} wrapped ui={false} />
+    ) : media[0]["media-metadata"][0] ? (
+      <Image src={media[0]["media-metadata"][0].url} wrapped ui={false} />
+    ) : null;
+
   return (
     <Segment style={{ margin: 10 }}>
       <Header as="h3">
@@ -24,10 +34,7 @@ const ArticleItem = ({
         rel="noopener noreferrer"
         style={{ marginBottom: 30 }}
       >
-        {media && media.length > 0 ? (
-          <Image src={media[0]["media-metadata"][2].url} wrapped ui={false} />
-        ) : null}
-
+        {TopStories ? null : media[0] && renderImage()}
         <Card.Content>
           <Card.Description>{abstract}</Card.Description>
         </Card.Content>
