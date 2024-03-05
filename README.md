@@ -1,6 +1,6 @@
 # The New York Times Snapshot
 
-> Live Website: https://ahmedalihashi.github.io/nytimes/   
+> Live Website: https://411h45h1.github.io/nytimes/   
 
 > Windows App Version Download [here](https://drive.google.com/file/d/1T3rpNWmfgOPKD_5EBAT9rD0j9iJVBn9l/view?usp=sharing) (win32 x64)
 
@@ -13,7 +13,7 @@ This is an app that displays the most viewed,shared and emailed articles of the 
 To create a light dev version
 
 ```
-git clone https://github.com/AhmedAlihashi/nytimes.git
+git clone https://github.com/411h45h1/nytimes.git
 npm install or yarn install
 npm run start or yarn start
 ```
@@ -23,7 +23,7 @@ To create a light dev version
 
 ```
 ( If you don't have foreman installed: npm install -g foreman )
-git clone https://github.com/AhmedAlihashi/nytimes.git
+git clone https://github.com/411h45h1/nytimes.git
 npm install or yarn install
 npm run start or yarn start
 ```
@@ -31,7 +31,7 @@ npm run start or yarn start
 Alternativly you can build your own version locally   
 
 ```
-git clone https://github.com/AhmedAlihashi/nytimes.git
+git clone https://github.com/411h45h1/nytimes.git
 cd electron
 npm install or yarn install
 npm run build-win or yarn build~win
